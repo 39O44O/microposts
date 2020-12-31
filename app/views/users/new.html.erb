@@ -1,34 +1,51 @@
-<div class="text-center">
-  <h1>新規登録</h1>
-</div>
+<!-- Astorolabe-->
+<!-- Promo Block -->
+<section class="u-promo-block u-promo-block--mheight-450 u-overlay u-overlay--dark text-white widthMax mb-5" style="background-image: url(<%= asset_path('wil-stewart-QYFTkPFqzv4-unsplash.jpg') %>);">
+	
+	<!-- Promo Content -->
+	
+	<div class="container u-overlay__inner u-ver-center u-content-space">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<div class="text-center">
+					<h1 class="display-sm-4 display-lg-3">新規登録</h1>
+					<!--<p class="h6 text-uppercase u-letter-spacing-sm">星を見上げる様に、自分を見つめよう</p>-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Promo Content -->
+</section>
 
-<div class="row">
-  <div class="col-sm-6 offset-sm-3">
-
-    <%= form_with(model: @user, local: true) do |f| %>
-      <%= render 'layouts/error_messages', model: f.object %>
-      
-      <div class="form-group">
-        <%= f.label :name, 'Name' %>
-        <%= f.text_field :name, class: 'form-control' %>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :email, 'Email' %>
-        <%= f.email_field :email, class: 'form-control' %>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :password, 'Password' %>
-        <%= f.password_field :password, class: 'form-control' %>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :password_confirmation, 'Confirmation' %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
-      </div>
-
-      <%= f.submit 'Sign up', class: 'btn btn-primary btn-block' %>
-    <% end %>
+<section>
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+  
+      <%= form_with(model: @user, local: true) do |f| %>
+        <%= render 'layouts/error_messages', model: f.object %>
+        
+        <div class="form-group">
+          <%= f.label :name, 'Name' %>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
+  
+        <div class="form-group">
+          <%= f.label :email, 'Email' %>
+          <%= f.email_field :email, class: 'form-control' %>
+        </div>
+  
+        <div class="form-group">
+          <%= f.label :password, 'Password' %>
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+  
+        <div class="form-group">
+          <%= f.label :password_confirmation, 'Confirmation' %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+        </div>
+  
+        <%= f.submit 'Sign up', class: 'btn btn-primary btn-block' %>
+      <% end %>
+    </div>
   </div>
-</div>
+</section>
